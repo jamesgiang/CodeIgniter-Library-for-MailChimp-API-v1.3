@@ -2,10 +2,17 @@ CodeIgniter Library for MailChimp API v1.3
 MailChimp API v1.3
 The CodeIgniter Way
 
+Note:
+
+This requires that you have an account with MailChimp, and are able to obtain your API Key:
+http://kb.mailchimp.com/article/where-can-i-find-my-api-key/
+
+
 Installation:
 
 - Download and extract
 - Place MCAPI.php in the /application/libraries/ folder of your CodeIgniter project
+
 
 To use:
 
@@ -13,6 +20,7 @@ To use:
     
     $config = array(
 	    'apikey' => ''      // Insert your api key
+            'secure' => FALSE   // Optional (defaults to FALSE)
 	);
 	$this->load->library('MCAPI', $config, 'mail_chimp');
         
