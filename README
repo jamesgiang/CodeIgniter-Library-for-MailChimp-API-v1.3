@@ -1,0 +1,32 @@
+<h1>CodeIgniter Library for MailChimp API v1.3</h1>
+<h2>MailChimp API v1.3</h3>
+<h3><em>The CodeIgniter Way</em></h3>
+
+<h4>Installation:</h4>
+<ol>
+<li>Download and extract</li>
+<li>Place MCAPI.php in the /application/libraries/ folder of your CodeIgniter project</li>
+</ol>
+
+<h4>To use</h4>
+<ul>
+<li>First, to load the library:
+    <pre>
+    
+    $config = array(
+	    'apikey' => ''      // Insert your api key
+	);
+	$this->load->library('MCAPI', $config, 'mail_chimp');
+        
+    </pre></li>
+<li>Then, to use:
+    <pre>
+        if($this->mail_chimp->listSubscribe($list_id, $email)) {
+            // $email is now subscribed to list with id: $list_id
+        }
+    </pre>
+</li>
+</ul>
+<p>Call all other methods in this manner. For full documentation on the MailChimp API, visit:
+<a href="http://apidocs.mailchimp.com/api/1.3/">http://apidocs.mailchimp.com/api/1.3/</a>
+</p>
