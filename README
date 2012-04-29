@@ -11,12 +11,13 @@ http://kb.mailchimp.com/article/where-can-i-find-my-api-key/
 Installation:
 
 - Download and extract
-- Place MCAPI.php in the /application/libraries/ folder of your CodeIgniter project
+- Place libraries/MCAPI.php in the /application/libraries/ folder of your CodeIgniter project
+- Place config/MCAPI.php in the /application/config/ folder of your CodeIgniter project
 
 
 To use:
 
-- 1. Setup your config.php:
+- 1. Setup your config/MCAPI.php:
 
 	$config['mcapi_api'] = ''; // Insert your api key
 	$config['mcapi_secure'] = FALSE; // Optional (defaults to FALSE)

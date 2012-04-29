@@ -1,4 +1,4 @@
-<?php
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class MCAPI {
     var $version = "1.3";
@@ -38,6 +38,7 @@ class MCAPI {
      */
     function __construct() {
     	$CI =& get_instance();
+		$CI->config->load('MCAPI');
         if($CI->config->item('mcapi_secure')) {
             $this->secure = $CI->config->item('mcapi_secure');
        	} else {
@@ -2487,4 +2488,5 @@ class MCAPI {
 
 }
 
-?>
+/* End of file MCAPI.php */
+/* Location: ./application/libraries/MCAPI.php */
