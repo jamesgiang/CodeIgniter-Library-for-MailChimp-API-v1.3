@@ -16,18 +16,18 @@ Installation:
 
 To use:
 
-- First, to load the library:
-    
-    $config = array(
-	    'apikey' => ''      // Insert your api key
-            'secure' => FALSE   // Optional (defaults to FALSE)
-	);
-	$this->load->library('MCAPI', $config, 'mail_chimp');
-        
+- 1. Setup your config.php:
 
-Then, to use:
+    $config['mcapi_api'] = ''; // Insert your api key
+	$config['mcapi_secure'] = FALSE; // Optional (defaults to FALSE)
+
+- 2. Load MCAPI library:
+
+	$this->load->library('MCAPI');
+        
+- 3. Use:
    
-        if($this->mail_chimp->listSubscribe($list_id, $email)) {
+        if($this->mcapi->listSubscribe($list_id, $email)) {
             // $email is now subscribed to list with id: $list_id
         }
 

@@ -36,14 +36,15 @@ class MCAPI {
      * @param string $apikey Your MailChimp apikey
      * @param string $secure Whether or not this should use a secure connection
      */
-    function __construct($config) {
-        if(isset($config['secure'])) {
-            $this->secure = $config['secure'];
-        } else {
-            $this->secure = false;
+    function __construct() {
+    	$CI =& get_instance();
+        if($CI->config->item('mcapi_secure')) {
+            $this->secure = $this->config->item('mcapi_secure');
+       	} else {
+            $this->secure = FALSE;
         }
         $this->apiUrl = parse_url("http://api.mailchimp.com/" . $this->version . "/?output=php");
-        $this->api_key = $config['apikey'];
+        $this->api_key = $CI->config->item('mcapi_apikey');
     }
     function setTimeout($seconds){
         if (is_int($seconds)){
