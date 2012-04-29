@@ -39,7 +39,7 @@ class MCAPI {
     function __construct() {
     	$CI =& get_instance();
         if($CI->config->item('mcapi_secure')) {
-            $this->secure = $this->config->item('mcapi_secure');
+            $this->secure = $CI->config->item('mcapi_secure');
        	} else {
             $this->secure = FALSE;
         }
